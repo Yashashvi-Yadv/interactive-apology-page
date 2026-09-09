@@ -1,467 +1,460 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Really Sorry ❤️</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorry Na Pookie ❤️</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #ff69b4, #ff1493, #ff69b4, #e73c7e);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            overflow: hidden;
-            position: relative;
-        }
+      body {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          -45deg,
+          #ee7752,
+          #e73c7e,
+          #ff69b4,
+          #ff1493,
+          #ff69b4,
+          #e73c7e
+        );
+        background-size: 400% 400%;
+        animation: gradientShift 8s ease infinite;
+        overflow: hidden;
+        position: relative;
+      }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
         }
-
-        .bg-heart {
-            position: fixed;
-            font-size: 2em;
-            opacity: 0.15;
-            animation: floatAround 15s ease-in-out infinite;
-            pointer-events: none;
-            color: #fff;
+        50% {
+          background-position: 100% 50%;
         }
-
-        @keyframes floatAround {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-                transform: translate(100px, -100px) rotate(90deg);
-            }
-            50% {
-                transform: translate(200px, 50px) rotate(180deg);
-            }
-            75% {
-                transform: translate(-50px, -50px) rotate(270deg);
-            }
+        100% {
+          background-position: 0% 50%;
         }
+      }
 
-        .container {
-            text-align: center;
-            padding: 50px 40px;
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 35px;
-            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.5);
-            max-width: 650px;
-            width: 90%;
-            animation: floatIn 1s ease-out;
-            border: 3px solid rgba(255, 105, 180, 0.3);
-            position: relative;
-            z-index: 10;
+      .bg-heart {
+        position: fixed;
+        font-size: 2em;
+        opacity: 0.15;
+        animation: floatAround 15s ease-in-out infinite;
+        pointer-events: none;
+        color: #fff;
+      }
+
+      @keyframes floatAround {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
         }
-
-        @keyframes floatIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+        25% {
+          transform: translate(100px, -100px) rotate(90deg);
         }
+        50% {
+          transform: translate(200px, 50px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-50px, -50px) rotate(270deg);
+        }
+      }
 
+      .container {
+        text-align: center;
+        padding: 50px 40px;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 35px;
+        box-shadow: 0 25px 70px rgba(255, 105, 180, 0.5);
+        max-width: 650px;
+        width: 90%;
+        animation: floatIn 1s ease-out;
+        border: 3px solid rgba(255, 105, 180, 0.3);
+        position: relative;
+        z-index: 10;
+      }
+
+      @keyframes floatIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      #mainText {
+        font-size: 2.2em;
+        color: #e73c7e;
+        margin-bottom: 40px;
+        font-weight: bold;
+        text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.2);
+        animation: pulse 2s ease-in-out infinite;
+        line-height: 1.4;
+      }
+
+      @media (max-width: 768px) {
         #mainText {
-            font-size: 2.8em;
-            color: #e73c7e;
-            margin-bottom: 50px;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.3);
-            animation: pulse 2s ease-in-out infinite;
-            line-height: 1.5;
+          font-size: 1.8em;
         }
+      }
 
-        @media (max-width: 768px) {
-            #mainText {
-                font-size: 2em;
-            }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
         }
+        50% {
+          transform: scale(1.05);
+        }
+      }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
+      .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        min-height: 150px;
+        align-items: center;
+        position: relative;
+      }
 
-        .buttons {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            min-height: 200px;
-            align-items: center;
-            position: relative;
-            padding: 20px;
-        }
+      button {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        font-size: 1.3em;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
 
-        @media (max-width: 768px) {
-            .buttons {
-                min-height: 350px;
-                flex-direction: column;
-            }
-        }
+      #yesBtn {
+        background: linear-gradient(135deg, #ff69b4, #ff1493);
+        color: white;
+        position: relative;
+        z-index: 5;
+      }
 
-        button {
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            font-size: 1.4em;
-            padding: 20px 40px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
+      #yesBtn:hover {
+        transform: translateY(-8px) scale(1.1);
+        box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
+      }
 
-        @media (max-width: 768px) {
-            button {
-                font-size: 1.2em;
-                padding: 16px 30px;
-            }
-        }
+      #noBtn {
+        background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+        color: #fff;
+        position: absolute;
+        transition: all 0.15s ease-out;
+        z-index: 10;
+      }
 
-        #yesBtn {
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
-            color: white;
-            position: relative;
-            z-index: 5;
-        }
+      .hidden {
+        display: none !important;
+      }
 
-        #yesBtn:hover {
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
-        }
+      .heart {
+        position: fixed;
+        font-size: 2.5em;
+        animation: floatUp 4s ease-in-out;
+        pointer-events: none;
+        z-index: 1000;
+      }
 
-        #noBtn {
-            background: linear-gradient(135deg, #ffb6c1, #ff69b4);
-            color: #fff;
-            position: absolute;
-            transition: all 0.15s ease-out;
-            z-index: 10;
+      @keyframes floatUp {
+        0% {
+          opacity: 1;
+          transform: translateY(0) rotate(0deg);
         }
+        100% {
+          opacity: 0;
+          transform: translateY(-1000px) rotate(360deg);
+        }
+      }
 
-        #noBtn:hover {
-            transform: scale(1.05);
-        }
+      .shake {
+        animation: shake 0.5s;
+      }
+      .shake-constant {
+        animation: shake 0.3s infinite;
+      }
 
-        button:active {
-            transform: translateY(-2px) scale(1.02);
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
         }
+        25% {
+          transform: translateX(-10px) rotate(-3deg);
+        }
+        75% {
+          transform: translateX(10px) rotate(3deg);
+        }
+      }
 
-        #emojiContainer {
-            font-size: 3.5em;
-            margin-top: 30px;
-            animation: bounce 1s ease infinite;
-            letter-spacing: 10px;
-        }
+      /* ANGRY METER STYLES */
+      .meter-wrapper {
+        margin-top: 30px;
+        padding: 10px;
+        background: #fdfdfd;
+        border-radius: 20px;
+        box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-        @media (max-width: 768px) {
-            #emojiContainer {
-                font-size: 2.5em;
-                letter-spacing: 5px;
-            }
-        }
+      #meterLabel {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #ff4500;
+        margin-bottom: 10px;
+      }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-25px); }
-        }
+      #angryMeter {
+        width: 100%;
+        height: 25px;
+        background-color: #ffe4e1;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 2px solid #ffb6c1;
+      }
 
-        .hidden {
-            display: none;
-        }
+      #meterFill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #ffd700, #ff8c00, #ff0000);
+        transition:
+          width 0.4s ease-out,
+          background 0.4s;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      }
 
-        .heart {
-            position: fixed;
-            font-size: 2.5em;
-            animation: floatUp 4s ease-in-out;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        @keyframes floatUp {
-            0% {
-                opacity: 1;
-                transform: translateY(0) rotate(0deg);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-1000px) rotate(360deg);
-            }
-        }
-
-        .shake {
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px) rotate(-5deg); }
-            75% { transform: translateX(10px) rotate(5deg); }
-        }
-
-        #clickCount {
-            margin-top: 20px;
-            font-size: 1.1em;
-            color: #e73c7e;
-            font-weight: bold;
-            min-height: 30px;
-        }
-
-        @media (max-width: 768px) {
-            #clickCount {
-                font-size: 1em;
-            }
-        }
-
-        .sparkle {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: sparkleAnim 1s ease-out forwards;
-            z-index: 999;
-        }
-
-        @keyframes sparkleAnim {
-            0% {
-                opacity: 1;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-        }
+      #finalCelebration {
+        font-size: 2.5em;
+        margin-top: 20px;
+        line-height: 1.5;
+        color: #ff1493;
+        text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.3);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Background floating hearts -->
-    <div class="bg-heart" style="top: 10%; left: 10%; animation-delay: 0s;">❤️</div>
-    <div class="bg-heart" style="top: 70%; left: 80%; animation-delay: 2s;">💖</div>
-    <div class="bg-heart" style="top: 30%; left: 85%; animation-delay: 4s;">💕</div>
-    <div class="bg-heart" style="top: 60%; left: 15%; animation-delay: 6s;">💗</div>
-    <div class="bg-heart" style="top: 20%; left: 50%; animation-delay: 8s;">💝</div>
+    <div class="bg-heart" style="top: 10%; left: 10%; animation-delay: 0s">
+      ❤️
+    </div>
+    <div class="bg-heart" style="top: 70%; left: 80%; animation-delay: 2s">
+      💖
+    </div>
+    <div class="bg-heart" style="top: 30%; left: 85%; animation-delay: 4s">
+      💕
+    </div>
+    <div class="bg-heart" style="top: 60%; left: 15%; animation-delay: 6s">
+      💗
+    </div>
+    <div class="bg-heart" style="top: 20%; left: 50%; animation-delay: 8s">
+      💝
+    </div>
 
-    <div class="container">
-        <div id="mainText">I'm really sorry ❤️<br>Please forgive me 🥺</div>
-        <div class="buttons">
-            <button id="yesBtn">Okay baby, I forgive you 💖</button>
-            <button id="noBtn">No, I'm still angry 😠</button>
+    <div class="container" id="mainContainer">
+      <div id="mainText">Sorry na yr 🥺<br />Mera pookie naraz hai kya? ❤️</div>
+
+      <div class="buttons">
+        <button id="yesBtn">Okay, maaf kiya 💖</button>
+        <button id="noBtn">Nahi, katti! 😠</button>
+      </div>
+
+      <!-- Angry Meter Section -->
+      <div class="meter-wrapper" id="meterContainer">
+        <div id="meterLabel">Gussa Meter: 0% 😌</div>
+        <div id="angryMeter">
+          <div id="meterFill"></div>
         </div>
-        <div id="clickCount"></div>
-        <div id="emojiContainer" class="hidden"></div>
+      </div>
+
+      <div id="finalCelebration" class="hidden"></div>
     </div>
 
     <script>
-        const mainText = document.getElementById('mainText');
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
-        const emojiContainer = document.getElementById('emojiContainer');
-        const clickCount = document.getElementById('clickCount');
-        const buttonsContainer = document.querySelector('.buttons');
+      const mainText = document.getElementById("mainText");
+      const yesBtn = document.getElementById("yesBtn");
+      const noBtn = document.getElementById("noBtn");
+      const buttonsContainer = document.querySelector(".buttons");
+      const meterFill = document.getElementById("meterFill");
+      const meterLabel = document.getElementById("meterLabel");
+      const meterContainer = document.getElementById("meterContainer");
+      const finalCelebration = document.getElementById("finalCelebration");
+      const mainContainer = document.getElementById("mainContainer");
 
-        const sorryMessages = [
-            "I'm really sorry ❤️<br>Please forgive me 🥺",
-            "I promise I'll never do it again 😢💕",
-            "You mean the world to me 🌍💖",
-            "I can't stop thinking about how sorry I am 😭",
-            "Please give me another chance 🙏❤️",
-            "I'll do anything to make it up to you 💝",
-            "You're the most important person to me 🥰",
-            "I messed up, but I love you so much 💕😔",
-            "Life isn't the same without your smile 😢💖",
-            "I promise to be better for you 🌟❤️",
-            "Forgive me please? I'll buy you ice cream 🍦💕",
-            "I'm so so so sorry baby 😭❤️",
-            "You deserve the world and I'll give it to you 🌹💖",
-            "Pretty please with a cherry on top? 🍒🥺",
-            "I'll never let you down again, I promise 💍❤️"
-        ];
+      // Gen-Z Hindi Apology Progression
+      const sorryMessages = [
+        "Aise mat kar na yar, meri galti thi 😭",
+        "Bhai gussa thook de ab please! 💦",
+        "Mera sweetu, cutie pie, maan ja na! 🥺💕",
+        "Itna gussa health ke liye toxic hai bestie 🚩",
+        "Main literally ro dunga abhi yahan 💀",
+        "Ek last chance de de, pakka no nautanki next time 🤞",
+        "Tu nahi maanegi toh main tapak jaunga yahi 👻",
+        "Bhav mat kha itna, chal patch up karein? 🤝❤️",
+        "Arey meri maa/baap, sorry x 1000! 🙏",
+        "Bas kar rulaayegi kya pagli? Maan ja ab! 😭🌋",
+      ];
 
-        let currentMessageIndex = 0;
-        let noClickCount = 0;
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      let currentMessageIndex = 0;
+      let noClickCount = 0;
+      let angryLevel = 0;
+      const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        );
 
-        function createSparkle(x, y) {
-            for (let i = 0; i < 5; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                sparkle.style.left = x + (Math.random() - 0.5) * 50 + 'px';
-                sparkle.style.top = y + (Math.random() - 0.5) * 50 + 'px';
-                document.body.appendChild(sparkle);
-                setTimeout(() => sparkle.remove(), 1000);
-            }
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.textContent = [
+          "❤️",
+          "💖",
+          "💕",
+          "💗",
+          "💝",
+          "🥰",
+          "😍",
+          "🥟",
+          "🍕",
+        ][Math.floor(Math.random() * 9)];
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = window.innerHeight + "px";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 4000);
+      }
+
+      function moveNoButton() {
+        const rect = buttonsContainer.getBoundingClientRect();
+        const btnRect = noBtn.getBoundingClientRect();
+        const yesRect = yesBtn.getBoundingClientRect();
+        const maxX = rect.width - btnRect.width;
+        const maxY = rect.height - btnRect.height;
+
+        let newX, newY;
+        let attempts = 0;
+
+        do {
+          newX = Math.random() * maxX;
+          newY = Math.random() * maxY;
+          attempts++;
+
+          const noLeft = rect.left + newX;
+          const noRight = noLeft + btnRect.width;
+          const noTop = rect.top + newY;
+          const noBottom = noTop + btnRect.height;
+
+          const padding = 20;
+          const overlaps = !(
+            noRight + padding < yesRect.left ||
+            noLeft - padding > yesRect.right ||
+            noBottom + padding < yesRect.top ||
+            noTop - padding > yesRect.bottom
+          );
+
+          if (!overlaps || attempts >= 50) break;
+        } while (true);
+
+        noBtn.style.left = newX + "px";
+        noBtn.style.top = newY + "px";
+
+        // Shrink the NO button slightly to make YES button look better
+        noClickCount++;
+        const newScale = Math.max(0.4, 1 - noClickCount * 0.08);
+        noBtn.style.transform = `scale(${newScale})`;
+      }
+
+      function initNoButton() {
+        noBtn.style.left = isMobile ? "60%" : "70%";
+        noBtn.style.top = "50%";
+        noBtn.style.transform = "translate(-50%, -50%) scale(1)";
+      }
+
+      function handleNoAction() {
+        moveNoButton();
+
+        // Update Text
+        if (currentMessageIndex < sorryMessages.length) {
+          mainText.innerHTML = sorryMessages[currentMessageIndex];
+          currentMessageIndex++;
+        } else {
+          mainText.innerHTML = "AB TOH HADD HO GAYI! MAAN JAAAA 😡😭";
         }
 
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.textContent = ['❤️', '💖', '💕', '💗', '💝', '🥰', '😍'][Math.floor(Math.random() * 7)];
-            heart.style.left = Math.random() * window.innerWidth + 'px';
-            heart.style.top = window.innerHeight + 'px';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 4000);
+        mainText.classList.add("shake");
+        setTimeout(() => mainText.classList.remove("shake"), 500);
+
+        // Update Angry Meter
+        angryLevel = Math.min(100, angryLevel + 10);
+        meterFill.style.width = angryLevel + "%";
+
+        if (angryLevel < 30) {
+          meterLabel.innerHTML = `Gussa Meter: ${angryLevel}% (Thoda naraz 😒)`;
+        } else if (angryLevel < 70) {
+          meterLabel.innerHTML = `Gussa Meter: ${angryLevel}% (Kaafi gussa 😠)`;
+        } else if (angryLevel < 100) {
+          meterLabel.innerHTML = `Gussa Meter: ${angryLevel}% (Bhai shant ho ja 🥵)`;
+        } else {
+          meterLabel.innerHTML = `Gussa Meter: 100% (MAXIMUM DANGER! 🌋)`;
+          mainContainer.classList.add("shake-constant"); // Screen shakes constantly at 100%
         }
 
-        function moveNoButton() {
-            const rect = buttonsContainer.getBoundingClientRect();
-            const btnRect = noBtn.getBoundingClientRect();
-            const yesRect = yesBtn.getBoundingClientRect();
-            const maxX = rect.width - btnRect.width - 20;
-            const maxY = rect.height - btnRect.height - 20;
-            
-            let newX, newY;
-            let attempts = 0;
-            const maxAttempts = 50;
-            
-            // Keep trying until we find a position that doesn't overlap with Yes button
-            do {
-                newX = Math.random() * maxX + 10;
-                newY = Math.random() * maxY + 10;
-                attempts++;
-                
-                // Calculate if the new position would overlap with Yes button
-                const noLeft = rect.left + newX;
-                const noRight = noLeft + btnRect.width;
-                const noTop = rect.top + newY;
-                const noBottom = noTop + btnRect.height;
-                
-                const yesLeft = yesRect.left;
-                const yesRight = yesRect.right;
-                const yesTop = yesRect.top;
-                const yesBottom = yesRect.bottom;
-                
-                // Add padding to keep buttons well separated
-                const padding = 30;
-                
-                // Check if positions overlap
-                const overlaps = !(
-                    noRight + padding < yesLeft ||
-                    noLeft - padding > yesRight ||
-                    noBottom + padding < yesTop ||
-                    noTop - padding > yesBottom
-                );
-                
-                if (!overlaps || attempts >= maxAttempts) {
-                    break;
-                }
-            } while (true);
-            
-            noBtn.style.left = newX + 'px';
-            noBtn.style.top = newY + 'px';
-            
-            createSparkle(btnRect.left + btnRect.width/2, btnRect.top + btnRect.height/2);
-            
-            // Shrink the button each time it moves
-            noClickCount++;
-            const newScale = Math.max(0.3, 1 - (noClickCount * 0.1));
-            noBtn.style.transform = `scale(${newScale})`;
+        // Yes button gets more tempting/bigger
+        if (noClickCount > 2) {
+          yesBtn.style.transform = `scale(${1 + noClickCount * 0.05})`;
+        }
+      }
+
+      initNoButton();
+      window.addEventListener("resize", initNoButton);
+
+      // Desktop logic
+      if (!isMobile) {
+        noBtn.addEventListener("mouseenter", handleNoAction);
+      }
+
+      // Mobile/Click logic
+      noBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        handleNoAction();
+      });
+
+      // Yes Button Logic
+      yesBtn.addEventListener("click", function () {
+        mainContainer.classList.remove("shake-constant"); // Stop shaking if they finally agree!
+        mainText.innerHTML = "YAYYY! Finally maan gayi meri jaan! 😍💖🥳";
+
+        buttonsContainer.classList.add("hidden");
+        meterContainer.classList.add("hidden");
+
+        finalCelebration.innerHTML =
+          "Chalo ab jaldi se ready ho jao, <br>Momos khane chalte hain! 🥟✨💃";
+        finalCelebration.classList.remove("hidden");
+
+        // Massive heart explosion
+        for (let i = 0; i < 40; i++) {
+          setTimeout(() => createHeart(), i * 100);
         }
 
-        function initNoButton() {
-            const isMobileView = window.innerWidth <= 768;
-            noBtn.style.left = isMobileView ? '50%' : '70%';
-            noBtn.style.top = isMobileView ? '70%' : '50%';
-            noBtn.style.transform = 'translate(-50%, -50%) scale(1)';
-            noClickCount = 0;
-        }
-
-        initNoButton();
-        window.addEventListener('resize', initNoButton);
-
-        // Desktop only: Move on hover
-        if (!isMobile) {
-            noBtn.addEventListener('mouseenter', function() {
-                moveNoButton();
-                // Change message immediately
-                currentMessageIndex = (currentMessageIndex + 1) % sorryMessages.length;
-                mainText.innerHTML = sorryMessages[currentMessageIndex];
-                mainText.classList.add('shake');
-                setTimeout(() => mainText.classList.remove('shake'), 500);
-                
-                if (noClickCount <= 5) {
-                    clickCount.innerHTML = `Come on... just click YES! 🥺 (Attempts: ${noClickCount})`;
-                } else if (noClickCount <= 10) {
-                    clickCount.innerHTML = `Please baby! I'm begging you! 😭 (Attempts: ${noClickCount})`;
-                } else {
-                    clickCount.innerHTML = `I can do this all day! 💪❤️ (Attempts: ${noClickCount})`;
-                }
-                
-                createHeart();
-            });
-        }
-
-        // Mobile: Move on click and change message immediately
-        noBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            moveNoButton();
-            
-            // Change message immediately
-            currentMessageIndex = (currentMessageIndex + 1) % sorryMessages.length;
-            mainText.innerHTML = sorryMessages[currentMessageIndex];
-            
-            mainText.classList.add('shake');
-            setTimeout(() => mainText.classList.remove('shake'), 500);
-
-            if (noClickCount <= 5) {
-                clickCount.innerHTML = `Come on... just click YES! 🥺 (Attempts: ${noClickCount})`;
-            } else if (noClickCount <= 10) {
-                clickCount.innerHTML = `Please baby! I'm begging you! 😭 (Attempts: ${noClickCount})`;
-            } else {
-                clickCount.innerHTML = `I can do this all day! 💪❤️ (Attempts: ${noClickCount})`;
-            }
-
-            createHeart();
-        });
-
-        // Handle Yes button click
-        yesBtn.addEventListener('click', function() {
-            mainText.innerHTML = "Yay! You forgave me! 😍💖🥳";
-            emojiContainer.innerHTML = "😊❤️💃🎉✨🥰💕🌟🎊💖🌹😘";
-            emojiContainer.classList.remove('hidden');
-            clickCount.innerHTML = "I LOVE YOU SO MUCH! ❤️❤️❤️";
-            buttonsContainer.style.display = 'none';
-
-            for (let i = 0; i < 30; i++) {
-                setTimeout(() => createHeart(), i * 150);
-            }
-
-            document.body.style.background = 'linear-gradient(-45deg, #ff69b4, #ff1493, #ff69b4, #ffc0cb, #ff69b4, #ff1493)';
-        });
-
-        // Make Yes button grow bigger as No attempts increase
-        setInterval(() => {
-            if (noClickCount > 3 && buttonsContainer.style.display !== 'none') {
-                yesBtn.style.transform = `translateY(-8px) scale(${1.1 + (noClickCount * 0.05)})`;
-            }
-        }, 100);
+        document.body.style.background =
+          "linear-gradient(-45deg, #ff69b4, #ff1493, #ff69b4, #ffc0cb, #ff69b4, #ff1493)";
+      });
     </script>
-</body>
+  </body>
 </html>
